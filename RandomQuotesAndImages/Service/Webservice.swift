@@ -34,12 +34,12 @@ class Webservice {
         guard let quoteUrl = Constants.Urls.randomQuoteUrl else {throw NetworkError.badUrl}
         
         //async let makes these run concurrently
+        //thread suspension does not happen here
         async let (imgData, _) = URLSession.shared.data(from: imgUrl)
         async let (quoteData, _) = URLSession.shared.data(from: quoteUrl)
         
-        let randImg = try JSONDecoder().decode(RandomImage.self, from: try await imgData)
+        //thread suspension happens here with await
         let randQuote = try JSONDecoder().decode(Quote.self, from: try await quoteData)
-        
-        return randImg
+        return RandomImage(image: try await imgData, quote: randQuote)
     }
 }
