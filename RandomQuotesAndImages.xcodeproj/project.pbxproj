@@ -14,6 +14,9 @@
 		2CEA0E60278E1ECF001B7C31 /* RandomQuotesAndImagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA0E5F278E1ECF001B7C31 /* RandomQuotesAndImagesTests.swift */; };
 		2CEA0E6A278E1ED0001B7C31 /* RandomQuotesAndImagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA0E69278E1ED0001B7C31 /* RandomQuotesAndImagesUITests.swift */; };
 		2CEA0E6C278E1ED0001B7C31 /* RandomQuotesAndImagesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA0E6B278E1ED0001B7C31 /* RandomQuotesAndImagesUITestsLaunchTests.swift */; };
+		2CEA0E7C278E1FDF001B7C31 /* RandomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA0E7B278E1FDF001B7C31 /* RandomImage.swift */; };
+		2CEA0E7E278E204F001B7C31 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA0E7D278E204F001B7C31 /* Webservice.swift */; };
+		2CEA0E81278E2303001B7C31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA0E80278E2303001B7C31 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		2CEA0E65278E1ED0001B7C31 /* RandomQuotesAndImagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomQuotesAndImagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEA0E69278E1ED0001B7C31 /* RandomQuotesAndImagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuotesAndImagesUITests.swift; sourceTree = "<group>"; };
 		2CEA0E6B278E1ED0001B7C31 /* RandomQuotesAndImagesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuotesAndImagesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2CEA0E7B278E1FDF001B7C31 /* RandomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImage.swift; sourceTree = "<group>"; };
+		2CEA0E7D278E204F001B7C31 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		2CEA0E80278E2303001B7C31 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 		2CEA0E4D278E1EC6001B7C31 /* RandomQuotesAndImages */ = {
 			isa = PBXGroup;
 			children = (
+				2CEA0E7F278E22F2001B7C31 /* Utils */,
+				2CEA0E78278E1F55001B7C31 /* ViewModel */,
+				2CEA0E79278E1F85001B7C31 /* Model */,
+				2CEA0E7A278E1FA1001B7C31 /* Service */,
 				2CEA0E4E278E1EC6001B7C31 /* RandomQuotesAndImagesApp.swift */,
 				2CEA0E50278E1EC6001B7C31 /* ContentView.swift */,
 				2CEA0E52278E1ECF001B7C31 /* Assets.xcassets */,
@@ -125,6 +135,37 @@
 				2CEA0E6B278E1ED0001B7C31 /* RandomQuotesAndImagesUITestsLaunchTests.swift */,
 			);
 			path = RandomQuotesAndImagesUITests;
+			sourceTree = "<group>";
+		};
+		2CEA0E78278E1F55001B7C31 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2CEA0E79278E1F85001B7C31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CEA0E7B278E1FDF001B7C31 /* RandomImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CEA0E7A278E1FA1001B7C31 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2CEA0E7D278E204F001B7C31 /* Webservice.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2CEA0E7F278E22F2001B7C31 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2CEA0E80278E2303001B7C31 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEA0E81278E2303001B7C31 /* Constants.swift in Sources */,
 				2CEA0E51278E1EC6001B7C31 /* ContentView.swift in Sources */,
+				2CEA0E7C278E1FDF001B7C31 /* RandomImage.swift in Sources */,
+				2CEA0E7E278E204F001B7C31 /* Webservice.swift in Sources */,
 				2CEA0E4F278E1EC6001B7C31 /* RandomQuotesAndImagesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
