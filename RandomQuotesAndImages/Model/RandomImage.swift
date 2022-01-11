@@ -8,7 +8,7 @@
 import Foundation
 
 struct RandomImage: Decodable {
-    let image: Data
+    let imageData: Data
     let quote: Quote
 }
 

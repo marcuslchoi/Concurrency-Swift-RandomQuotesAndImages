@@ -28,7 +28,7 @@ class Webservice {
         return randomImages
     }
     
-    func getRandomImage(id: Int) async throws -> RandomImage
+    private func getRandomImage(id: Int) async throws -> RandomImage
     {
         guard let imgUrl = Constants.Urls.getRandomImageUrl() else {throw NetworkError.badUrl}
         guard let quoteUrl = Constants.Urls.randomQuoteUrl else {throw NetworkError.badUrl}
@@ -40,6 +40,6 @@ class Webservice {
         
         //thread suspension happens here with await
         let randQuote = try JSONDecoder().decode(Quote.self, from: try await quoteData)
-        return RandomImage(image: try await imgData, quote: randQuote)
+        return RandomImage(imageData: try await imgData, quote: randQuote)
     }
 }
