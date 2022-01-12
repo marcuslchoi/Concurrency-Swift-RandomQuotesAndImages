@@ -20,9 +20,20 @@ class Webservice {
     func getRandomImages(ids: [Int]) async throws -> [RandomImage]
     {
         var randomImages: [RandomImage] = []
-        for id in ids {
-            let randImg = try await getRandomImage(id: id)
-            randomImages.append(randImg)
+        
+        //using a task group
+        try await withThrowingTaskGroup(of: (Int, RandomImage).self) { group in
+            for id in ids {
+                //created a reference to self
+                group.addTask { [self] in
+                    return (id, try await getRandomImage(id: id))
+                }
+            }
+            //async sequence
+            for try await (id, randImg) in group
+            {
+                randomImages.append(randImg)
+            }
         }
         
         return randomImages
