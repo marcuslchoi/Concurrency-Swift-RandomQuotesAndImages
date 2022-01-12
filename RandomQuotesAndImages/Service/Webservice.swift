@@ -30,7 +30,7 @@ class Webservice {
                 }
             }
             //async sequence
-            for try await (id, randImg) in group
+            for try await (_, randImg) in group
             {
                 randomImages.append(randImg)
             }
@@ -39,7 +39,7 @@ class Webservice {
         return randomImages
     }
     
-    private func getRandomImage(id: Int) async throws -> RandomImage
+    func getRandomImage(id: Int) async throws -> RandomImage
     {
         guard let imgUrl = Constants.Urls.getRandomImageUrl() else {throw NetworkError.badUrl}
         guard let quoteUrl = Constants.Urls.randomQuoteUrl else {throw NetworkError.badUrl}
